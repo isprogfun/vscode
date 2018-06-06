@@ -135,6 +135,15 @@ export class AppInsightsAppender implements ITelemetryAppender {
 		data = mixin(data, this._defaultData);
 		let { properties, measurements } = AppInsightsAppender._getData(data);
 		this._aiClient.trackEvent(this._eventPrefix + '/' + eventName, properties, measurements);
+
+		console.log('Inside the appInsights appender!. ' + this._eventPrefix + '/' + eventName);
+		Object.keys(properties).forEach(key => {
+			console.log(`Properties key ${key} value ${properties[key]}`);
+		});
+		Object.keys(measurements).forEach(key => {
+			console.log(`Measurements key ${key} value ${measurements[key]}`);
+		});
+
 	}
 
 	dispose(): TPromise<any> {

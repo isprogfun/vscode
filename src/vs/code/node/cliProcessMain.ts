@@ -228,6 +228,8 @@ export function main(argv: ParsedArgs): TPromise<void> {
 					appenders.push(new AppInsightsAppender(eventPrefix, null, product.aiConfig.asimovKey));
 				}
 
+				console.log(`Appenders length: ${appenders.length}`);
+
 				// It is important to dispose the AI adapter properly because
 				// only then they flush remaining data.
 				process.once('exit', () => appenders.forEach(a => a.dispose()));
