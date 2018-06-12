@@ -52,6 +52,10 @@
 	padding-right: 2px;
 }
 
+.monaco-workbench.mac .task-statusbar-item-label > .task-statusbar-item-label-counter {
+	vertical-align: middle;
+}
+
 .task-statusbar-item-label > .task-statusbar-item-label-error,
 .task-statusbar-item-label > .task-statusbar-item-label-warning,
 .task-statusbar-item-label > .task-statusbar-item-label-info {
@@ -59,6 +63,13 @@
 	padding-right: 8px;
 	width: 8px;
 	height: 22px;
+}
+
+.monaco-workbench.mac .task-statusbar-item-label > .task-statusbar-item-label-error,
+.monaco-workbench.mac .task-statusbar-item-label > .task-statusbar-item-label-warning,
+.monaco-workbench.mac .task-statusbar-item-label > .task-statusbar-item-label-info {
+	vertical-align: middle;
+	height: 11px;
 }
 
 .task-statusbar-item-label > .task-statusbar-item-label-error {
